@@ -8,8 +8,9 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-inter);
+  --font-times: 'Times New Roman', serif;
+  --font-helvetica: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,5 +23,172 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
 }
+
+.font-times {
+  font-family: var(--font-times);
+}
+
+.font-helvetica {
+  font-family: var(--font-helvetica);
+}
+
+/* Typography Scale - Modular Scale 1.25 (Major Third) */
+h1 {
+  font-size: 3.052rem; /* 48.83px */
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  font-family: var(--font-helvetica);
+}
+
+h2 {
+  font-size: 2.441rem; /* 39.06px */
+  font-weight: 600;
+  line-height: 1.3;
+  margin-bottom: 0.875rem;
+  font-family: var(--font-helvetica);
+}
+
+h3 {
+  font-size: 1.953rem; /* 31.25px */
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: 0.75rem;
+  font-family: var(--font-helvetica);
+}
+
+h4 {
+  font-size: 1.25rem; /* 20px - mindre end før */
+  font-weight: 400;
+  line-height: 1.4;
+  margin-bottom: 1;
+  font-family: var(--font-helvetica);
+}
+
+h5 {
+  font-size: 1rem; /* 20px - mindre end før */
+  font-weight: 500;
+  line-height: 1.4;
+  margin-bottom: 1;
+  font-family: var(--font-helvetica);
+}
+
+p {
+  font-size: 1rem; /* 16px - base size */
+  font-weight: 400;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+li {
+  font-size: 1rem; /* 16px */
+  font-weight: 400;
+  line-height: 1.5;
+   font-family: var(--font-helvetica);
+}
+
+small {
+  font-size: 0.875rem; /* 14px */
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: 0.05em;
+  font-family: var(--font-helvetica);
+}
+
+/* Button Styling */
+button, .button {
+  font-family: var(--font-helvetica);
+  font-size: 0.875rem; /* 14px - mindre skrift */
+  font-weight: 400; /* tyndere vægt */
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+a[class*="bg-"], button[class*="bg-"] {
+  font-family: var(--font-helvetica);
+  font-size: 0.875rem; /* 14px */
+  font-weight: 400; /* tyndere vægt */
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.441rem; /* 39.06px */
+  }
+  
+  h2 {
+    font-size: 1.953rem; /* 31.25px */
+  }
+  
+  h3 {
+    font-size: 1.563rem; /* 25px */
+  }
+  
+  h4 {
+    font-size: 1.25rem; /* 20px */
+  }
+}
+
+/* Hero Section Background */
+.hero-bg {
+  background-image: url('/images/hero-img.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Spacing System - Mobile First (8px grid) */
+/* Section Spacing - Distance between sections */
+.section-spacing {
+  margin-top: 4rem; /* 64px mobile */
+  margin-bottom: 4rem; /* 64px mobile */
+}
+
+@media (min-width: 768px) {
+  .section-spacing {
+    margin-top: 6rem; /* 96px desktop */
+    margin-bottom: 6rem; /* 96px desktop */
+  }
+}
+
+/* Section Padding - Internal padding within sections */
+.section-padding {
+  padding-top: 3rem; /* 48px mobile */
+  padding-bottom: 3rem; /* 48px mobile */
+}
+
+@media (min-width: 768px) {
+  .section-padding {
+    padding-top: 8rem; /* 80px desktop */
+    padding-bottom: 8rem; /* 80px desktop */
+  }
+}
+
+/* Hero Spacing - Special spacing for hero sections */
+.hero-spacing {
+  margin-bottom: 5rem; /* 80px mobile */
+}
+
+@media (min-width: 768px) {
+  .hero-spacing {
+    margin-bottom: 7rem; /* 112px desktop */
+  }
+}
+
+/* Content Spacing - For smaller content blocks */
+.content-spacing {
+  margin-top: 2rem; /* 32px mobile */
+  margin-bottom: 2rem; /* 32px mobile */
+}
+
+@media (min-width: 768px) {
+  .content-spacing {
+    margin-top: 3rem; /* 48px desktop */
+    margin-bottom: 3rem; /* 48px desktop */
+  }
+}
+
+
