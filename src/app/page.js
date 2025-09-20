@@ -4,11 +4,13 @@ import FeaturesSection from './components/features/FeaturesSection.jsx';
 import ProductDetailsSection from './components/features/ProductDetailsSection.jsx';
 import FullScreenImageSection from './components/features/FullScreenImageSection.jsx';
 import TestimonialsSection from './components/features/TestimonialsSection.jsx';
+import ProductsSection from './components/features/ProductsSection.jsx';
 
 export default function Home() {
   return (
     <div>
       <HeroSection />
+      <ProductsSection />
       <FeaturesSection />
       <ProductDetailsSection />
       <FullScreenImageSection />
