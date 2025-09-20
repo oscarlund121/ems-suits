@@ -11,7 +11,7 @@ export default function FeaturesSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           
           {/* Image */}
-          <div className="flex justify-center items-center pr-4 lg:justify-start">
+          <div className="order-2 lg:order-1 flex justify-center items-center lg:pr-4 lg:justify-start">
             <img
               src="/images/features-main.webp"
               alt="EMS dragt i aktion"
@@ -20,7 +20,7 @@ export default function FeaturesSection() {
           </div>
 
           {/* Text Content */}
-          <div className="space-y-8">
+          <div className="order-1 lg:order-2 space-y-8">
             
 
             {/* Section Header */}
@@ -58,7 +58,7 @@ export default function FeaturesSection() {
             </div>
 
             {/* CTA Button */}
-            <div className="mt-8">
+            <div className="mt-8 text-center lg:text-left">
               <Button variant="primary" href="/kob-til-private">
                 Se vores produkter
               </Button>

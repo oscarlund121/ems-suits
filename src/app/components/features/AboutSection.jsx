@@ -41,7 +41,7 @@ export default function AboutSection() {
               gøre – for styrke, energi, velvære og livskvalitet.
             </p>
 
-            <div className="mt-8">
+            <div className="mt-8 text-center lg:text-left">
               <Button variant="primary" href="/om">
                 Læs mere om os
               </Button>
@@ -49,7 +49,7 @@ export default function AboutSection() {
           </div>
 
           {/* Image */}
-          <div className="flex justify-center items-start pl-4 lg:justify-top">
+          <div className="flex justify-center items-start lg:pl-4 lg:justify-top">
             <img
               src="/images/om-os-main.webp"
               alt="EmsSuits team"

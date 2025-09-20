@@ -52,7 +52,7 @@ export default function ProductDetailsSection() {
             </div>
 
             {/* CTA Button */}
-            <div className="mt-8 flex justify-end">
+            <div className="mt-8 text-center lg:text-right">
               <Button variant="secondary" href="/om">
                 Læs mere om produktet
               </Button>
@@ -61,7 +61,7 @@ export default function ProductDetailsSection() {
           </div>
 
           {/* Image */}
-          <div className="flex justify-center items-center pl-4 lg:justify-end">
+          <div className="flex justify-center items-center lg:pl-4 lg:justify-end">
             <img
               src="/images/produkt-desc-main.webp"
               alt="Mand med EMS-dragt og telefon"
