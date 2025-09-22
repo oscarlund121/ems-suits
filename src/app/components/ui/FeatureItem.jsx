@@ -5,10 +5,12 @@ export default function FeatureItem({ number, title, description }) {
         {number}
       </span> */}
       <div className="space-y-0">
-        <h5 className="text-white">{title}</h5>
+        <h4 className="text-white">{title}</h4>
+        <div className="">
         <p className="text-white">
           {description}
         </p>
+        </div>
       </div>
     </div>
   );

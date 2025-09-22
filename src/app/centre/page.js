@@ -40,7 +40,7 @@ export default function Centre() {
       <section className="bg-white section-padding">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="space-y-8">
-            <h1 className="text-4xl md:text-6xl font-bold uppercase tracking-wider">
+            <h1 className="text-4xl md:text-6xl  uppercase tracking-wider">
               Besøg Vores Centre
             </h1>
             <div className="space-y-6 leading-relaxed max-w-3xl mx-auto">

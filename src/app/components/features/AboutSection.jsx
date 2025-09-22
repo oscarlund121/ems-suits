@@ -15,30 +15,23 @@ export default function AboutSection() {
                 title="Mød Ems Suits"
               />
               <p>
-                <h5 className="font-bold">
+              
                   Hos EmsSuits tror vi på, at effektiv træning skal være
                 tilgængelig for alle
-              </h5>
-              – ikke kun for dem med tid og penge til dyre fitnesscentre. Derfor
-              har vi udviklet en ny generation af EMS-dragter, der kombinerer
-              topkvalitet, brugervenlig teknologi og en pris, hvor alle kan være
-              med.
+             
+              – ikke kun for dem med tid og penge til dyre fitnesscentre.
             </p>
 
             <p>
-              <h5 className="font-bold">Vi gør det simpelt:</h5> Du tager
+          Vi gør det simpelt: Du tager
               dragten på, kobler den til vores lille aktivator, og styrer hele
-              træningen direkte fra vores egen app på din telefon. Det betyder,
-              at du kan træne når som helst, hvor som helst, uden at gå på
-              kompromis med resultaterne.
+              træningen direkte fra vores egen app på din telefon.
             </p>
 
             <p>
-              <h5 className="font-bold">Med EmsSuits får du en løsning,</h5>
+             Med EmsSuits får du en løsning,
               der både er bedre, billigere og lettere at bruge end de
-              traditionelle EMS-systemer. Vores mission er at give flere
-              mennesker muligheden for at opleve, hvor meget EMS-træning kan
-              gøre – for styrke, energi, velvære og livskvalitet.
+              traditionelle EMS-systemer.
             </p>
           </div>
 

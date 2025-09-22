@@ -48,9 +48,9 @@ export default function Footer() {
               Handelsbetingelser
             </h3>
             <ul className="space-y-2">
-              <li><a href="/brug-af-emsuits-dragt" className="text-gray-600 hover:text-gray-900">Brug af Emsuits dragt</a></li>
-              <li><a href="/privatlivspolitik" className="text-gray-600 hover:text-gray-900">Privatlivspolitik</a></li>
-              <li><a href="/betingelser" className="text-gray-600 hover:text-gray-900">Betingelser</a></li>
+              <li><Link href="/brug-af-emsuits-dragt" className="text-gray-600 hover:text-gray-900">Brug af Emsuits dragt</Link></li>
+              <li><Link href="/privatlivspolitik" className="text-gray-600 hover:text-gray-900">Privatlivspolitik</Link></li>
+              <li><Link href="/betingelser" className="text-gray-600 hover:text-gray-900">Betingelser</Link></li>
             </ul>
           </div>
         </div>

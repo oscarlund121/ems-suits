@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 :root {
   --background: #ffffff; /* Lock light background */
@@ -6,7 +7,9 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-inter);
-  --font-times: "Times New Roman", serif;
+  --font-lexend: var(--font-lexend);
+  --font-big-shoulders: "Big Shoulders Display", Impact, "Arial Black", sans-serif;
+  --font-times: "Times New Roman", Times, serif;
   --font-helvetica: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
@@ -16,6 +19,14 @@
 body {
   background: var(--background);
   color: var(--foreground);
+}
+
+.font-lexend {
+  font-family: var(--font-lexend);
+}
+
+.font-big-shoulders {
+  font-family: var(--font-big-shoulders);
 }
 
 .font-times {
@@ -29,10 +40,10 @@ body {
 /* Typography Scale - Modular Scale 1.25 (Major Third) */
 h1 {
   font-size: 6.052rem; /* 48.83px */
-  font-weight: 700;
+  font-weight: 200;
   line-height: 1.2;
   margin-bottom: 1rem;
-  font-family: var(--font-helvetica);
+  font-family: var(--font-big-shoulders);
 }
 
 h2 {
@@ -41,6 +52,7 @@ h2 {
   line-height: 1.3;
   margin-bottom: 0.875rem;
   font-family: var(--font-helvetica);
+  
 }
 
 h3 {
@@ -64,12 +76,12 @@ h5 {
   font-weight: 500;
   line-height: 1.4;
   margin-bottom: 1;
-  font-family: var(--font-helvetica);
+ font-family: var(--font-helvetica);
 }
 
 p {
-  font-size: 1rem; /* 16px - base size */
-  font-weight: 400;
+  font-size: 0.9rem; /* 16px - base size */
+  font-weight: 300;
   line-height: 1.6;
   margin-bottom: 1rem;
 }

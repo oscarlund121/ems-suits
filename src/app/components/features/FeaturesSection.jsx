@@ -29,7 +29,7 @@ export default function FeaturesSection() {
               title="Hvorfor vælge EMS Suits?"
             />
             {/* Features Grid */}
-            <div className="flex flex-col  gap-2">
+            <div className="grid grid-cols-1 md:grid-cols-2  gap-8">
               
               <FeatureItem 
                 number="01"
@@ -58,7 +58,7 @@ export default function FeaturesSection() {
             </div>
 
             {/* CTA Button */}
-            <div className=" text-center lg:text-right mt-4">
+            <div className=" text-center lg:text-left mt-4">
               <Button variant="primary" href="/produkter">
                 Se vores produkter
               </Button>

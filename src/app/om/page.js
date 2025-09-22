@@ -73,7 +73,7 @@ export default function Om() {
 
             {/* Text content - spans 1 column */}
             <div className="lg:col-span-1 space-y-6">
-              <h3>Hvad gør os anderledes</h3>
+              <h3>Hvad gør os anderledes?</h3>
 
               <p>
                 Vi tror på, at avanceret træningsteknologi skal være tilgængelig for alle -
@@ -143,9 +143,9 @@ export default function Om() {
 
       {/* Section 4: Frihed og fleksibilitet - Gray Background */}
       <section className="bg-[#272727] text-white section-padding">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="space-y-6">
-            <h2>Frihed og fleksibilitet</h2>
+            <h1>Frihed og fleksibilitet</h1>
             <p className="text-lg md:text-xl leading-relaxed">
               Uanset om du træner derhjemme, udendørs eller i et center, giver
               EmsSuits dig friheden til at træne, når det passer dig. Vores
@@ -153,6 +153,11 @@ export default function Om() {
               tidligere generationer – og samtidig markant billigere end mange
               andre løsninger på markedet.
             </p>
+            <div className="mt-10">
+              <Button variant="primary" href="/produkter">
+                Se vores produkter
+              </Button>
+            </div>
           </div>
         </div>
       </section>
