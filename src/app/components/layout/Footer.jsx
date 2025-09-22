@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export default function Footer() {
   return (
     <footer className="bg-white border-t border-gray-200">
@@ -35,8 +37,8 @@ export default function Footer() {
               Vores webshop
             </h3>
             <ul className="space-y-2">
-              <li><a href="/kob-til-private" className="text-gray-600 hover:text-gray-900">Private</a></li>
-              <li><a href="/kob-til-erhverv" className="text-gray-600 hover:text-gray-900">Erhverv</a></li>
+              <li><Link href="/produkter/ems-hjemmedragt" className="text-gray-600 hover:text-gray-900">Private</Link></li>
+              <li><Link href="/produkter/ems-erhvervsdragt" className="text-gray-600 hover:text-gray-900">Erhverv</Link></li>
             </ul>
           </div>
           

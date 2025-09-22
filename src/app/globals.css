@@ -1,24 +1,17 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
+  --background: #ffffff; /* Lock light background */
+  --foreground: #000000; /* Default text color per design */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-inter);
-  --font-times: 'Times New Roman', serif;
-  --font-helvetica: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-times: "Times New Roman", serif;
+  --font-helvetica: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+/* Disable automatic OS dark mode switching to keep consistent light design */
+/* If dark mode is desired later, implement via an explicit .dark class instead of prefers-color-scheme */
 
 body {
   background: var(--background);
@@ -35,7 +28,7 @@ body {
 
 /* Typography Scale - Modular Scale 1.25 (Major Third) */
 h1 {
-  font-size: 3.052rem; /* 48.83px */
+  font-size: 6.052rem; /* 48.83px */
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 1rem;
@@ -85,7 +78,33 @@ li {
   font-size: 1rem; /* 16px */
   font-weight: 400;
   line-height: 1.5;
-   font-family: var(--font-helvetica);
+  font-family: var(--font-helvetica);
+}
+
+/* Accordion list items - smaller and slightly bold */
+.accordion-list li {
+  font-size: 0.875rem; /* 14px */
+  font-weight: 500;
+  line-height: 1.4;
+  font-family: var(--font-helvetica);
+  margin-bottom: 0.5rem;
+  color: #000;
+}
+
+/* Clean accordion styling */
+.accordion-list {
+  padding-left: 0;
+  list-style: none;
+}
+
+.accordion-list li {
+  padding-left: 0;
+  position: relative;
+}
+
+/* Remove bullet points for cleaner look */
+.accordion-list li::before {
+  content: none;
 }
 
 small {
@@ -97,17 +116,19 @@ small {
 }
 
 /* Button Styling */
-button, .button {
+button,
+.button {
   font-family: var(--font-helvetica);
-  font-size: 0.875rem; /* 14px - mindre skrift */
+  font-size: 0.75rem; /* 14px - mindre skrift */
   font-weight: 400; /* tyndere vægt */
   text-transform: uppercase;
   letter-spacing: 0.1em;
 }
 
-a[class*="bg-"], button[class*="bg-"] {
+a[class*="bg-"],
+button[class*="bg-"] {
   font-family: var(--font-helvetica);
-  font-size: 0.875rem; /* 14px */
+  font-size: 0.75rem; /* 14px */
   font-weight: 400; /* tyndere vægt */
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -118,23 +139,26 @@ a[class*="bg-"], button[class*="bg-"] {
   h1 {
     font-size: 2.441rem; /* 39.06px */
   }
-  
+
   h2 {
     font-size: 1.953rem; /* 31.25px */
   }
-  
+
   h3 {
     font-size: 1.563rem; /* 25px */
   }
-  
+
   h4 {
     font-size: 1.25rem; /* 20px */
+  }
+  h5 {
+    font-size: 1rem; /* 16px */
   }
 }
 
 /* Hero Section Background */
 .hero-bg {
-  background-image: url('/images/hero-img.webp');
+  background-image: url("/images/hero-img.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -156,8 +180,8 @@ a[class*="bg-"], button[class*="bg-"] {
 
 /* Section Padding - Internal padding within sections */
 .section-padding {
-  padding-top: 3rem; /* 48px mobile */
-  padding-bottom: 3rem; /* 48px mobile */
+  padding-top: 5rem; /* 48px mobile */
+  padding-bottom: 5rem; /* 48px mobile */
 }
 
 @media (min-width: 768px) {
@@ -191,4 +215,68 @@ a[class*="bg-"], button[class*="bg-"] {
   }
 }
 
+/* Logo Responsive Sizing */
+.logo-responsive {
+  width: clamp(24rem, 8vw + 20rem, 36rem);
+}
 
+/* Leaflet Map Styles */
+.leaflet-container {
+  font-family: var(--font-helvetica);
+}
+
+.leaflet-popup-content-wrapper {
+  border-radius: 8px;
+}
+
+.leaflet-popup-content {
+  margin: 0;
+  font-family: var(--font-helvetica);
+}
+
+.custom-marker {
+  transition: transform 0.2s ease;
+}
+
+.custom-marker:hover {
+  transform: scale(1.1);
+}
+
+.leaflet-control-zoom a {
+  background-color: white;
+  color: #272727;
+}
+
+.leaflet-control-zoom a:hover {
+  background-color: #f5f5f5;
+}
+
+/* Image with logo background shape */
+figure.custom {
+  position: relative;
+  display: flex;
+  display: block;
+}
+
+figure.custom::before {
+  content: "";
+  background-image: url("/images/logo/logo1.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: var(--bg-opacity);
+  height: clamp(75px, 30vw, 200px); /* Øget størrelse for logo */
+  width: clamp(75px, 25vw, 200px); /* Øget størrelse for logo */
+  position: absolute;
+  bottom: 0;
+  right: 70px;
+  z-index: 1000;
+}
+
+figure.custom img {
+  inline-size: 100%;
+  display: block;
+  position: relative;
+  z-index: 2;
+  object-fit: cover;
+}

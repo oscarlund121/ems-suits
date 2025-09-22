@@ -15,12 +15,12 @@ export default function FeaturesSection() {
             <img
               src="/images/features-main.webp"
               alt="EMS dragt i aktion"
-              className="w-full h-auto rounded-lg shadow-lg"
+              className="w-full h-auto shadow-sm"
             />
           </div>
 
           {/* Text Content */}
-          <div className="order-1 lg:order-2 space-y-8">
+          <div className="order-1 lg:order-2 flex flex-col space-y-4 ">
             
 
             {/* Section Header */}
@@ -29,7 +29,7 @@ export default function FeaturesSection() {
               title="Hvorfor vælge EMS Suits?"
             />
             {/* Features Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="flex flex-col  gap-2">
               
               <FeatureItem 
                 number="01"
@@ -58,8 +58,8 @@ export default function FeaturesSection() {
             </div>
 
             {/* CTA Button */}
-            <div className="mt-8 text-center lg:text-left">
-              <Button variant="primary" href="/kob-til-private">
+            <div className=" text-center lg:text-right mt-4">
+              <Button variant="primary" href="/produkter">
                 Se vores produkter
               </Button>
             </div>

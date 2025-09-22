@@ -5,7 +5,7 @@ import CheckmarkItem from '../ui/CheckmarkItem.jsx';
 
 export default function ProductDetailsSection() {
   return (
-    <section className="section-padding bg-white">
+    <section className="section-padding text-black bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           
@@ -65,7 +65,7 @@ export default function ProductDetailsSection() {
             <img
               src="/images/produkt-desc-main.webp"
               alt="Mand med EMS-dragt og telefon"
-              className="w-full max-h-180 object-cover rounded-lg shadow-lg"
+              className="w-full max-h-180 object-cover  shadow-sm hidden md:block"
             />
           </div>
 
