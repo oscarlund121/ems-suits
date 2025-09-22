@@ -1,12 +1,14 @@
 import { Resend } from 'resend';
 import { NextResponse } from 'next/server';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
 const FROM_ADDRESS = process.env.RESEND_FROM || 'EMS Suits <onboarding@resend.dev>';
 const COMPANY_EMAIL = process.env.COMPANY_EMAIL || 'delivered@resend.dev';
 
 export async function POST(request) {
   try {
+    // Initialize Resend inside the function to avoid build-time issues
+    const resend = new Resend(process.env.RESEND_API_KEY);
+    
     const body = await request.json();
     
     // Handle both contact form and order form data
