@@ -66,7 +66,7 @@ export default function CartPopup() {
               </p>
               <Link href="/produkter/ems-hjemmedragt">
                 <Button 
-                  variant="primary" 
+                  variant="secondary" 
                   onClick={() => setIsOpen(false)}
                 >
                   Se produkter
@@ -152,7 +152,7 @@ export default function CartPopup() {
                 {/* Checkout Button */}
                 <Link href="/checkout">
                   <Button 
-                    variant="primary" 
+                    variant="secondary" 
                     size="lg" 
                     className="w-full"
                     onClick={() => setIsOpen(false)}

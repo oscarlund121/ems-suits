@@ -26,7 +26,7 @@ export default function ProductDetailsSection() {
                 du kan mærke i hverdagen.
               </h5>
 
-              <div className="space-y-3">
+              <div className="space-y-3 mt-4">
                 <CheckmarkItem>
                   Vores dragter kombinerer slidstyrke, brugervenlighed og fuld 
                   helkropsaktivering – alt sammen i en prisvenlig løsning, så flere 
