@@ -1,13 +1,32 @@
 'use client'
 
 import { useSearchParams } from 'next/navigation'
-import { useEffect } from 'react'
+import { Suspense, useEffect } from 'react'
 import Link from 'next/link'
 import { HiCheckCircle, HiMail, HiClock } from 'react-icons/hi'
 import Button from '../components/ui/Button'
 import SectionHeader from '../components/ui/SectionHeader.jsx'
+import LoadingSpinner from '../components/common/LoadingSpinner'
 
 export default function OrderConfirmationPage() {
+  return (
+    <section className="section-padding bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Suspense
+          fallback={
+            <div className="max-w-5xl mx-auto text-center py-16 flex items-center justify-center">
+              <LoadingSpinner size="large" />
+            </div>
+          }
+        >
+          <OrderConfirmationContent />
+        </Suspense>
+      </div>
+    </section>
+  )
+}
+
+function OrderConfirmationContent() {
   const searchParams = useSearchParams()
   const orderId = searchParams.get('orderId')
 
@@ -17,9 +36,7 @@ export default function OrderConfirmationPage() {
   }, [orderId])
 
   return (
-    <section className="section-padding bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-5xl mx-auto text-center">
+    <div className="max-w-5xl mx-auto text-center">
           
           {/* Success Icon */}
           <div className="mb-8">
@@ -141,8 +158,6 @@ export default function OrderConfirmationPage() {
               </Button>
             </Link>
           </div>
-        </div>
-      </div>
-    </section>
+    </div>
   )
 }
