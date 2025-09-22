@@ -21,6 +21,11 @@ body {
   color: var(--foreground);
 }
 
+/* Custom max-width for wider layouts */
+.max-w-8xl {
+  max-width: 90rem; /* 1440px */
+}
+
 .font-lexend {
   font-family: var(--font-lexend);
 }
@@ -65,7 +70,7 @@ h3 {
 
 h4 {
   font-size: 1.25rem; /* 20px - mindre end før */
-  font-weight: 400;
+  font-weight: 600;
   line-height: 1.4;
   margin-bottom: 1;
   font-family: var(--font-helvetica);

@@ -42,7 +42,7 @@ export default function OpenStreetMap({
   const position = [center.lat, center.lng]
 
   return (
-    <div className="w-full h-full rounded-lg overflow-hidden border border-gray-200">
+    <div className="w-full h-full overflow-hidden border border-gray-200">
       <MapContainer
         center={position}
         zoom={zoom}

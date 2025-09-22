@@ -159,8 +159,8 @@ export default function CheckoutForm() {
           Tilføj produkter til din kurv før du kan gå til checkout
         </p>
         <Button 
-          variant="primary"
-          onClick={() => router.push('/produkter/ems-hjemmedragt')}
+          variant="secondary"
+          onClick={() => router.push('/produkter')}
         >
           Se produkter
         </Button>

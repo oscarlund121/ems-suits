@@ -33,7 +33,7 @@ export default function CartPopup() {
   if (!isOpen) return null
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex justify-end">
+    <div className="fixed inset-0 bg-[#272727] bg-opacity-50 z-50 flex justify-end">
       <div className="cart-popup bg-white w-full max-w-md h-full overflow-y-auto shadow-xl">
         
         {/* Header */}
@@ -58,13 +58,13 @@ export default function CartPopup() {
                   <path fillRule="evenodd" d="M10 2L3 7v11a2 2 0 002 2h10a2 2 0 002-2V7l-7-5zM8 15a1 1 0 102 0v-3a1 1 0 10-2 0v3z" clipRule="evenodd" />
                 </svg>
               </div>
-              <h3 className="text-lg font-medium text-gray-900 mb-2">
+              <h3 className="text-lg font-medium text-black mb-2">
                 Din kurv er tom
               </h3>
               <p className="text-gray-500 mb-6">
                 Tilføj produkter for at fortsætte med dit køb
               </p>
-              <Link href="/produkter/ems-hjemmedragt">
+              <Link href="/produkter">
                 <Button 
                   variant="secondary" 
                   onClick={() => setIsOpen(false)}

@@ -5,9 +5,9 @@ export default function Om() {
     <div className="bg-white text-black">
 
       {/* Section 1: Hero Section - Clean centered layout */}
-      <section className="text-white bg-[#272727]  h-[calc(100vh-100px)] section-padding">
+      <section className="text-white bg-[#272727]  section-padding">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="space-y-">
+          <div className="space-y-6">
             {/* Large heading */}
             <h1 className="text-4xl md:text-6xl uppercase">
               Godt at møde dig
@@ -39,11 +39,7 @@ export default function Om() {
             </div>
             
             {/* Call to action button */}
-            <div className="pt-8">
-              <Button >
-                OPLEV FREMTIDENS TRÆNING
-              </Button>
-            </div>
+           
           </div>
         </div>
       </section>

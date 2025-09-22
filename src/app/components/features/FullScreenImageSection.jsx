@@ -14,7 +14,7 @@ export default function FullScreenImageSection() {
         {/* Text overlay */}
         <div className="absolute inset-0 z-1000 flex items-center justify-center">
           <div className="text-center text-white max-w-2xl px-6">
-            <h1 className="text-4xl font-bold mb-4">Træn med EMS</h1>
+            <h1 className="text-4xl">Træn med EMS</h1>
             <Button variant="secondary" size="lg" href="/produkter">
               Se vores produkter
             </Button>
