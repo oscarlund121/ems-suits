@@ -12,11 +12,11 @@ export default function AboutSection() {
             <div className="space-y-6">
               <SectionHeader 
                 smallText="Om os"
-                title="Mød Ems Suits"
+                title="Mød EMS dragter"
               />
               <p>
               
-                  Hos EmsSuits tror vi på, at effektiv træning skal være
+                  Hos EMS dragter tror vi på, at effektiv træning skal være
                 tilgængelig for alle
              
               – ikke kun for dem med tid og penge til dyre fitnesscentre.
@@ -29,7 +29,7 @@ export default function AboutSection() {
             </p>
 
             <p>
-             Med EmsSuits får du en løsning,
+             Med EMS dragter får du en løsning,
               der både er bedre, billigere og lettere at bruge end de
               traditionelle EMS-systemer.
             </p>
@@ -39,7 +39,7 @@ export default function AboutSection() {
           <div className="flex justify-center items-start col-span-2 lg:pl-4 lg:justify">
             <img
               src="/images/om-os-main.webp"
-              alt="EmsSuits team"
+              alt="EMS dragter team"
               className="w-full h-auto shadow-sm"
             />
           </div>

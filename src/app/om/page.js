@@ -16,7 +16,7 @@ export default function Om() {
             {/* Descriptive paragraphs */}
             <div className="space-y-6 leading-relaxed max-w-3xl mx-auto">
               <p>
-                EMSSUITS præsenterer den nye bølge af EMS-teknologi og fortæller deres historie 
+                EMS Dragter præsenterer den nye bølge af EMS-teknologi og fortæller deres historie 
                 gennem innovative træningsløsninger.
               </p>
               

@@ -20,7 +20,7 @@ export default function ProductDetailsSection() {
 
             <div className="space-y-8">
               <h5 className="text-lg font-semibold">
-                EmsSuits giver dig effektiv helkropstræning på kun 20 minutter 
+                EMS dragter giver dig effektiv helkropstræning på kun 20 minutter 
                 med trådløse EMS-dragter. Med vores dragter aktiveres alle de store 
                 muskelgrupper samtidig – skånsomt, fleksibelt og med resultater, 
                 du kan mærke i hverdagen.
@@ -34,12 +34,12 @@ export default function ProductDetailsSection() {
                 </CheckmarkItem>
 
                 <CheckmarkItem>
-                  EmsSuits er en ny generation af EMS-dragter – udviklet til dig, der 
+                  EMS dragter er en ny generation af EMS-dragter – udviklet til dig, der 
                   vil have mest muligt ud af din træning på kortest mulig tid.
                 </CheckmarkItem>
 
                 <CheckmarkItem>
-                  Når du træner med EmsSuits, aktiveres hele kroppen på én gang: 
+                  Når du træner med EMS dragter, aktiveres hele kroppen på én gang: 
                   ben, ryg, mave, arme og skuldre arbejder samtidig, hvilket giver 
                   en komplet træning på bare 20 minutter.
                 </CheckmarkItem>

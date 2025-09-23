@@ -3,7 +3,7 @@ import SectionHeader from '../components/ui/SectionHeader.jsx'
 import ProductCard from '../components/ui/ProductCard.jsx'
 
 export const metadata = {
-  title: 'Produkter - EMS Suits',
+  title: 'Produkter - EMS dragt',
   description: 'Se alle vores EMS dragter og vælg den der passer til dine behov. Hjemme- og erhvervsdragter tilgængelig.',
 }
 

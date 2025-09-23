@@ -2,7 +2,7 @@ import SectionHeader from '../components/ui/SectionHeader'
 import MapContainer from '../components/ui/GoogleMap'
 
 export const metadata = {
-  title: 'Vores Centre | EMS Suits',
+  title: 'Vores Centre | EMS dragt',
   description: 'Find vores EMS træningscentre og kontaktinformation. Besøg os i Holbæk for professionel EMS træning.',
 }
 

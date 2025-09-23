@@ -1,7 +1,7 @@
 import { Resend } from 'resend';
 import { NextResponse } from 'next/server';
 
-const FROM_ADDRESS = process.env.RESEND_FROM || 'EMS Suits <onboarding@resend.dev>';
+const FROM_ADDRESS = process.env.RESEND_FROM || 'EMS dragt <onboarding@resend.dev>';
 const COMPANY_EMAIL = process.env.COMPANY_EMAIL || 'delivered@resend.dev';
 
 export async function POST(request) {
@@ -178,7 +178,7 @@ export async function POST(request) {
             </div>
 
             <div style="margin-top: 20px; text-align: center; color: #666; font-size: 14px;">
-              <p>Med venlig hilsen,<br>EMS Suits Team</p>
+              <p>Med venlig hilsen,<br>EMS dragt Team</p>
             </div>
           </div>
         `,

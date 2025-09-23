@@ -26,7 +26,7 @@ export default function FeaturesSection() {
             {/* Section Header */}
             <SectionHeader 
               smallText="Velkommen"
-              title="Hvorfor vælge EMS Suits?"
+              title="Hvorfor vælge EMS dragt?"
             />
             {/* Features Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-6">

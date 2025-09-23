@@ -15,7 +15,7 @@ const lexend = Lexend({
 });
 
 export const metadata = {
-  title: "EMS Dragt - Professionelle EMS Træningsdragter",
+  title: "EMS dragt - Professionelle EMS Træningsdragter",
   description: "Professionelle EMS dragter til erhverv og private. Avanceret teknologi for optimal træning.",
   icons: {
     icon: [

@@ -35,7 +35,7 @@ export function generateMetadata({ params }) {
   }
 
   return {
-    title: `${product.name} | EMS Suits`,
+    title: `${product.name} | EMS dragt`,
     description: product.description.short,
     openGraph: {
       title: product.name,
