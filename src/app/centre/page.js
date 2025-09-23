@@ -23,9 +23,9 @@ export default function Centre() {
       }
     ],
     openingHours: [
-      { days: "Mon - Fri", hours: "8:00 am – 8:00 pm" },
-      { days: "Saturday", hours: "9:00 am – 7:00 pm" },
-      { days: "Sunday", hours: "9:00 am – 9:00 pm" }
+      { days: "Man - Fre", hours: "08:00 - 20:00" },
+      { days: "Lørdag", hours: "09:00 - 19:00" },
+      { days: "Søndag", hours: "09:00 - 21:00" }
     ],
     coordinates: {
       lat: 55.7171,
