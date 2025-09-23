@@ -6,7 +6,7 @@ export default function ProductCard({ product }) {
   return (
     <div className="group bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300 max-w-sm">
       {/* Product Image */}
-      <div className="relative h-48 overflow-hidden bg-white flex items-center justify-center p-4">
+      <div className="relative h-48  overflow-hidden bg-white flex items-center justify-center p-4">
         <img
           src={product.images?.[0]?.src || product.images?.main}
           alt={product.images?.[0]?.alt || product.name}
@@ -20,7 +20,7 @@ export default function ProductCard({ product }) {
       </div>
 
       {/* Product Info */}
-      <div className="p-4 h-56 flex flex-col">
+      <div className="p-4 h-62 flex flex-col">
         <div className="flex-1">
           <h4 className="text-base font-semibold text-black mb-2 leading-tight">
             {product.name}

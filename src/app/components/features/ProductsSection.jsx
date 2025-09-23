@@ -8,7 +8,7 @@ export default function ProductsSection() {
   const products = getAllProducts()
 
   return (
-    <section className="section-padding bg-white text-black">
+    <section className="section-padding flex justify-center bg-white text-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeader
           smallText="Vores produkter"
@@ -17,7 +17,7 @@ export default function ProductsSection() {
         />
         
         {/* Products Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mt-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mt-12">
           {products.map((product) => (
             <ProductCard key={product.slug} product={product} />
           ))}

@@ -4,6 +4,8 @@ import { useState } from 'react'
 import { formatPrice } from '../../../lib/products'
 import useCartStore from '../../../store/cartStore'
 import Button from '../ui/Button'
+import Link from 'next/link'
+import { FaArrowLeft } from 'react-icons/fa'
 
 export default function DynamicProductSection({ product }) {
   const [selectedImage, setSelectedImage] = useState(0)
@@ -26,14 +28,23 @@ export default function DynamicProductSection({ product }) {
   }
 
   return (
-    <section className="py-4 bg-white">
+    <section className="py-4 mb-12 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        {/* Se alle produkter link */}
+        <div className="mb-6">
+          <Link href="/produkter" className="inline-flex items-center text-gray-600 hover:text-black hover:underline transition-colors">
+            <FaArrowLeft className="mr-2" />
+            Se alle produkter
+          </Link>
+        </div>
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           
           {/* Image Gallery - Left Side */}
           <div className="space-y-4">
             {/* Main Image */}
-            <div className="aspect-square bg-gray-50 rounded-lg overflow-hidden border">
+            <div className="aspect-square bg-white rounded-md overflow-hidden border">
               <img
                 src={product.images[selectedImage].src}
                 alt={product.images[selectedImage].alt}
@@ -47,14 +58,14 @@ export default function DynamicProductSection({ product }) {
                 <button
                   key={index}
                   onClick={() => setSelectedImage(index)}
-                  className={`aspect-square w-20 h-20 rounded-lg overflow-hidden border-2 transition-colors ${
+                  className={`aspect-square w-20 h-20 rounded-md overflow-hidden border transition-colors ${
                     selectedImage === index ? 'border-black' : 'border-gray-200 hover:border-gray-300'
                   }`}
                 >
                   <img
                     src={image.src}
                     alt={image.alt}
-                    className="w-full h-full object-contain bg-gray-50"
+                    className="w-full h-full object-contain bg-white"
                   />
                 </button>
               ))}

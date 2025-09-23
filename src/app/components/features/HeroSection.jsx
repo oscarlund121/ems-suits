@@ -12,11 +12,14 @@ export default function HeroSection() {
             alt="EMS Dragt Logo"
             className="logo-responsive h-auto max-w-full object-contain hidden md:block"
           />
-        {/*   <div className="">
+          <div className="flex flex-col sm:flex-row gap-4 mt-6">
             <Button variant="secondary" href="/produkter">
-              Se produkter
+              Se dragter
             </Button>
-          </div> */}
+            <Button variant="primary" href="/om">
+              Læs om EMS
+            </Button>
+          </div>
         </div>
       </div>
     </section>

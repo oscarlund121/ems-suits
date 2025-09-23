@@ -9,9 +9,10 @@ export const products = {
     sku: '364215376135191',
     category: 'private',
     images: [
-      { src: "/images/ems-suit.jpg", alt: "EMS Hjemmedragt" },
-      { src: "/images/energy-box.jpg", alt: "Energy Box" },
-      { src: "/images/waist-belt.png", alt: "Waist Belt" }
+      { src: "/images/ems-suit.png", alt: "EMS Hjemmedragt" },
+      { src: "/images/energy-box-homesuit.webp", alt: "Energy Box" },
+      { src: "/images/waist-belt.png", alt: "Waist Belt" },
+      { src: "/images/washing-bag.png", alt: "Washing Bag" }
     ],
     description: {
       short: "Komplet EMS træningssæt til hjemmebrug med 20 pads for maksimal muskelaktivering",
@@ -61,9 +62,10 @@ export const products = {
     sku: '364215376135192',
     category: 'business',
     images: [
-      { src: "/images/ems-suit.jpg", alt: "EMS Erhvervsdragt" },
+      { src: "/images/ems-suit.png", alt: "EMS Erhvervsdragt" },
       { src: "/images/energy-box.jpg", alt: "Professional Energy Box" },
-      { src: "/images/waist-belt.png", alt: "Professional Waist Belt" }
+      { src: "/images/waist-belt.png", alt: "Professional Waist Belt" },
+      { src: "/images/washing-bag.png", alt: "Washing Bag" }
     ],
     description: {
       short: "Professionel EMS dragt til fitnesscentre og træningsstudier med avanceret teknologi",

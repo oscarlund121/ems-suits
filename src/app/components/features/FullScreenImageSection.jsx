@@ -4,7 +4,7 @@ import Button from "../ui/Button.jsx";
 export default function FullScreenImageSection() {
   return (
     <section className="relative flex justify-center items-center">
-      <figure className="custom">
+      <figure className="">
         <img
           src="/images/mobile-main.webp"
           alt="EMS træning på mobil"
