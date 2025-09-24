@@ -55,9 +55,9 @@ export const products = {
   'ems-erhvervsdragt': {
     id: 'ems-erhvervsdragt',
     slug: 'ems-erhvervsdragt', 
-    name: 'EMS dragter Erhvervsdragt',
+    name: 'EMS dragter Pro dragt',
     shortName: 'Erhvervsdragt',
-    price: 15000,
+    price: 25000,
     currency: 'DKK',
     sku: '364215376135192',
     category: 'business',

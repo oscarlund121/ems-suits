@@ -12,11 +12,11 @@ export default function AboutSection() {
             <div className="space-y-6">
               <SectionHeader 
                 smallText="Om os"
-                title="Mød EMS dragter"
+                title="Mød EMS dragt"
               />
               <p>
               
-                  Hos EMS dragter tror vi på, at effektiv træning skal være
+                  Hos EMS dragt tror vi på, at effektiv træning skal være
                 tilgængelig for alle
              
               – ikke kun for dem med tid og penge til dyre fitnesscentre.

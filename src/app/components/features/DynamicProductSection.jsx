@@ -28,6 +28,7 @@ export default function DynamicProductSection({ product }) {
   }
 
   return (
+    <>
     <section className="py-4 mb-12 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
@@ -251,5 +252,93 @@ export default function DynamicProductSection({ product }) {
         </div>
       </div>
     </section>
+
+    {/* Home Gallery Section - Only show for private category */}
+    {product.category === 'private' && (
+      <section className="bg-[#272727] text-white section-padding">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h3 className="text-2xl sm:text-3xl font-bold  mb-4">
+              Se hvordan andre bruger EmsSuits hjemme
+            </h3>
+          </div>
+          
+          <div className="grid grid-cols-12 gap-4 auto-rows-fr min-h-[700px]">
+            {/* Large portrait - spans 3 columns, 4 rows (workout.webp - højformat) */}
+            <div className="col-span-3 row-span-4 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+              <img
+                src="/images/productsite-images/workout-3.webp"
+                alt="Hjemmetræning med EMS dragt"
+                className="w-full h-full object-cover"
+              />
+            </div>
+
+            {/* Wide landscape - spans 6 columns, 2 rows (workout-man-bike.webp - landscape) */}
+            <div className="col-span-6 row-span-2 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+              <img
+                src="/images/productsite-images/workout-man-bike.webp"
+                alt="Mand cykler med EMS dragt"
+                className="w-full h-full object-cover"
+              />
+            </div>
+
+            {/* Tall portrait - spans 3 columns, 4 rows (workout-3.webp - højformat) */}
+            <div className="col-span-3 row-span-4 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+              <img
+                src="/images/productsite-images/produkt-desc-main.webp"
+                alt="Professionel EMS træning"
+                className="w-full h-full object-cover object-[30%_50%]"
+              />
+            </div>
+
+            {/* Wide landscape - spans 6 columns, 2 rows (workout-2.webp - landscape) */}
+            <div className="col-span-6 row-span-2 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+              <img
+                src="/images/productsite-images/pushups-workout.webp"
+                alt="Intens EMS træning"
+                className="w-full h-full object-cover"
+              />
+            </div>
+
+            {/* Square - spans 3 columns, 2 rows (meditation.webp - højformat men kompakt) */}
+            <div className="col-span-3 row-span-2 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+              <img
+                src="/images/productsite-images/meditation.webp"
+                alt="Meditation og EMS træning"
+                className="w-full h-full object-cover"
+              />
+            </div>
+
+            {/* Square - spans 3 columns, 2 rows (pushups-workout.webp - kvadrat) */}
+            <div className="col-span-3 row-span-2 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+              <img
+                src="/images/productsite-images/workout-2.webp"
+                alt="Armstrækning med EMS"
+                className="w-full h-full object-cover object-[25%_50%]"
+              />
+            </div>
+
+            {/* Square - spans 3 columns, 2 rows (woman-weights.webp - kvadrat) */}
+            <div className="col-span-3 row-span-2 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+              <img
+                src="/images/productsite-images/woman-weights.webp"
+                alt="Kvinde træner med vægte og EMS"
+                className="w-full h-full object-cover"
+              />
+            </div>
+
+            {/* Square - spans 3 columns, 2 rows (boxing-2.webp - højformat men kompakt) */}
+            <div className="col-span-3 row-span-2 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+              <img
+                src="/images/productsite-images/boxing-2.webp"
+                alt="Boksning og EMS træning"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+    )}
+    </>
   )
 }

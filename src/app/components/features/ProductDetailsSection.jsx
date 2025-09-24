@@ -63,7 +63,7 @@ export default function ProductDetailsSection() {
           {/* Image */}
           <div className="flex justify-center items-center lg:pl-4 lg:justify-end">
             <img
-              src="/images/produkt-desc-main.webp"
+              src="/images/product-details.webp"
               alt="Mand med EMS-dragt og telefon"
               className="w-full max-h-180 object-cover  shadow-sm hidden md:block"
             />

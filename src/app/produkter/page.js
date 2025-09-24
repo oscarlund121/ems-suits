@@ -13,7 +13,7 @@ export default function ProductsPage() {
   return (
     <div className="bg-white text-black">
       {/* Header Section */}
-      <section className="bg-[#272727] text-white section-padding">
+      <section className="bg-[#272727] text-white py-15">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="space-y-8">
             <h1 className="text-4xl md:text-6xl uppercase tracking-wider">

@@ -25,7 +25,7 @@ export default function FeaturesSection() {
 
             {/* Section Header */}
             <SectionHeader 
-              smallText="Velkommen"
+          
               title="Hvorfor vælge EMS dragt?"
             />
             {/* Features Grid */}
