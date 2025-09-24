@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Image from 'next/image'
 import { formatPrice } from '../../../lib/products'
 import useCartStore from '../../../store/cartStore'
 import Button from '../ui/Button'
@@ -263,77 +264,89 @@ export default function DynamicProductSection({ product }) {
             </h3>
           </div>
           
-          <div className="grid grid-cols-12 gap-4 auto-rows-fr min-h-[700px]">
-            {/* Large portrait - spans 3 columns, 4 rows (workout.webp - højformat) */}
-            <div className="col-span-3 row-span-4 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
-              <img
-                src="/images/productsite-images/workout-3.webp"
-                alt="Hjemmetræning med EMS dragt"
-                className="w-full h-full object-cover"
-              />
+          <div className="space-y-6">
+            {/* Main layout - workout-3 til venstre, bike og pushup stablede til højre */}
+            <div className="grid grid-cols-3 grid-rows-2 gap-3 md:gap-4 h-[1000px]">
+              {/* workout-3 - venstre side, fylder hele højden */}
+              <div className="row-span-2 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow relative">
+                <Image
+                  src="/images/productsite-images/workout-3.webp"
+                  alt="Hjemmetræning med EMS dragt"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 33vw, (max-width: 1200px) 33vw, 33vw"
+                />
+              </div>
+
+              {/* workout-man-bike - øverste højre */}
+              <div className="col-span-2 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow relative">
+                <Image
+                  src="/images/productsite-images/workout-man-bike.webp"
+                  alt="Mand cykler med EMS dragt"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 67vw, (max-width: 1200px) 67vw, 67vw"
+                />
+              </div>
+
+              {/* abs-workout (pushup) - nederste højre */}
+              <div className="col-span-2 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow relative">
+                <Image
+                  src="/images/productsite-images/abs-workout.webp"
+                  alt="Intens EMS træning"
+                  fill
+                  className="object-cover object-[50%_30%]"
+                  sizes="(max-width: 768px) 67vw, (max-width: 1200px) 67vw, 67vw"
+                />
+              </div>
             </div>
 
-            {/* Wide landscape - spans 6 columns, 2 rows (workout-man-bike.webp - landscape) */}
-            <div className="col-span-6 row-span-2 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
-              <img
-                src="/images/productsite-images/workout-man-bike.webp"
-                alt="Mand cykler med EMS dragt"
-                className="w-full h-full object-cover"
-              />
-            </div>
 
-            {/* Tall portrait - spans 3 columns, 4 rows (workout-3.webp - højformat) */}
-            <div className="col-span-3 row-span-4 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
-              <img
-                src="/images/productsite-images/produkt-desc-main.webp"
-                alt="Professionel EMS træning"
-                className="w-full h-full object-cover object-[30%_50%]"
-              />
-            </div>
+            {/* Bottom section med 4 billeder - responsive grid */}
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
+              {/* meditation */}
+              <div className="aspect-square rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow relative">
+                <Image
+                  src="/images/productsite-images/meditation.webp"
+                  alt="Meditation og EMS træning"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
+                />
+              </div>
 
-            {/* Wide landscape - spans 6 columns, 2 rows (workout-2.webp - landscape) */}
-            <div className="col-span-6 row-span-2 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
-              <img
-                src="/images/productsite-images/pushups-workout.webp"
-                alt="Intens EMS træning"
-                className="w-full h-full object-cover"
-              />
-            </div>
+              {/* workout-2 */}
+              <div className="aspect-square rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow relative">
+                <Image
+                  src="/images/productsite-images/workout-2.webp"
+                  alt="Armstrækning med EMS"
+                  fill
+                  className="object-cover object-[25%_50%]"
+                  sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
+                />
+              </div>
 
-            {/* Square - spans 3 columns, 2 rows (meditation.webp - højformat men kompakt) */}
-            <div className="col-span-3 row-span-2 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
-              <img
-                src="/images/productsite-images/meditation.webp"
-                alt="Meditation og EMS træning"
-                className="w-full h-full object-cover"
-              />
-            </div>
+              {/* woman-weights */}
+              <div className="aspect-square rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow relative">
+                <Image
+                  src="/images/productsite-images/woman-weights.webp"
+                  alt="Kvinde træner med vægte og EMS"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
+                />
+              </div>
 
-            {/* Square - spans 3 columns, 2 rows (pushups-workout.webp - kvadrat) */}
-            <div className="col-span-3 row-span-2 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
-              <img
-                src="/images/productsite-images/workout-2.webp"
-                alt="Armstrækning med EMS"
-                className="w-full h-full object-cover object-[25%_50%]"
-              />
-            </div>
-
-            {/* Square - spans 3 columns, 2 rows (woman-weights.webp - kvadrat) */}
-            <div className="col-span-3 row-span-2 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
-              <img
-                src="/images/productsite-images/woman-weights.webp"
-                alt="Kvinde træner med vægte og EMS"
-                className="w-full h-full object-cover"
-              />
-            </div>
-
-            {/* Square - spans 3 columns, 2 rows (boxing-2.webp - højformat men kompakt) */}
-            <div className="col-span-3 row-span-2 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
-              <img
-                src="/images/productsite-images/boxing-2.webp"
-                alt="Boksning og EMS træning"
-                className="w-full h-full object-cover"
-              />
+              {/* boxing-2 */}
+              <div className="aspect-square rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow relative">
+                <Image
+                  src="/images/productsite-images/boxing-2.webp"
+                  alt="Boksning og EMS træning"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
+                />
+              </div>
             </div>
           </div>
         </div>
