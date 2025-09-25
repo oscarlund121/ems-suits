@@ -21,7 +21,7 @@ export default function ProductsPage() {
             </h1>
             <div className="space-y-6 leading-relaxed max-w-3xl mx-auto">
               <p>
-                Vælg den EMS dragt der passer til dine behov. Vi tilbyder 
+                Vælg den dragt der passer til dine behov. Vi tilbyder 
                 løsninger til både private og virksomheder.
               </p>
               <p>
