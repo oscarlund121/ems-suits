@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { FaFacebook, FaInstagram } from 'react-icons/fa';
 
 export default function Footer() {
@@ -8,9 +9,11 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
           {/* Logo Column */}
           <div className="md:col-span-1">
-            <img 
+            <Image 
               src="/images/logo/logo1.png" 
               alt="EMS Dragt Logo" 
+              width={200}
+              height={192}
               className="h-48 w-auto mb-4"
             />
           </div>

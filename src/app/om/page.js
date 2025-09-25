@@ -1,4 +1,5 @@
 import Button from "../components/ui/Button";
+import Image from "next/image";
 
 export default function Om() {
   return (
@@ -45,10 +46,12 @@ export default function Om() {
       </section>
       <div className="section-padding flex justify-center items-center">
         {/* Image - spans 2 columns */}
-        <div className="lg:col-span-2 max-w-7xl">
-          <img
+        <div className="lg:col-span-2 max-w-7xl relative">
+          <Image
             src="/images/om-ems-page.webp"
             alt="EmsSuits EMS træning"
+            width={1100}
+            height={800}
             className="w-275 h-auto shadow-sm object-cover"
           />
         </div>
@@ -59,10 +62,12 @@ export default function Om() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 items-center">
             {/* Image - spans 2 columns */}
-            <div className="lg:col-span-2">
-              <img
+            <div className="lg:col-span-2 relative">
+              <Image
                 src="/images/om-ems-page-2.webp"
                 alt="EmsSuits EMS træning"
+                width={800}
+                height={600}
                 className="w-full h-auto shadow-lg object-cover"
               />
             </div>
@@ -133,10 +138,12 @@ export default function Om() {
             </div>
 
             {/* Image - spans 2 columns */}
-            <div className="lg:col-span-2">
-              <img
+            <div className="lg:col-span-2 relative">
+              <Image
                 src="/images/om-ems-page-3.webp"
                 alt="EmsSuits EMS træning"
+                width={800}
+                height={600}
                 className="w-full h-auto shadow-sm object-cover"
               />
             </div>

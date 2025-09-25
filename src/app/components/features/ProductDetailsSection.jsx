@@ -2,6 +2,7 @@ import Small from '../ui/Small.jsx';
 import Button from '../ui/Button.jsx';
 import SectionHeader from '../ui/SectionHeader.jsx';
 import CheckmarkItem from '../ui/CheckmarkItem.jsx';
+import Image from 'next/image';
 
 export default function ProductDetailsSection() {
   return (
@@ -62,10 +63,12 @@ export default function ProductDetailsSection() {
 
           {/* Image */}
           <div className="flex justify-center items-center lg:pl-4 lg:justify-end">
-            <img
+            <Image
               src="/images/product-details.webp"
               alt="Mand med EMS-dragt og telefon"
-              className="w-full max-h-180 object-cover  shadow-sm hidden md:block"
+              width={600}
+              height={700}
+              className="w-full max-h-180 object-cover shadow-sm hidden md:block"
             />
           </div>
 

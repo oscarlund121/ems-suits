@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import Image from 'next/image';
 import Input from './Input.jsx';
 import Button from '../ui/Button.jsx';
 import useCartStore from '../../../store/cartStore';
@@ -386,11 +387,12 @@ export default function CheckoutForm() {
             <div className="space-y-6">
               {items.map((item) => (
                 <div key={item.id} className="flex gap-4 items-start">
-                  <div className="w-16 h-16 bg-white border border-black flex-shrink-0">
-                    <img 
+                  <div className="w-16 h-16 bg-white border border-black flex-shrink-0 relative">
+                    <Image 
                       src={item.images?.[0]?.src || '/images/ems-suit.jpg'} 
                       alt={item.images?.[0]?.alt || item.name}
-                      className="w-full h-full object-cover"
+                      fill
+                      className="object-cover"
                     />
                   </div>
                   <div className="flex-1">

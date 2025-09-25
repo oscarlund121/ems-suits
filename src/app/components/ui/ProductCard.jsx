@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import Button from './Button.jsx'
 import { formatPrice } from '../../../lib/products'
 
@@ -6,11 +7,12 @@ export default function ProductCard({ product }) {
   return (
     <div className="group bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300 max-w-sm">
       {/* Product Image */}
-      <div className="relative h-48  overflow-hidden bg-white flex items-center justify-center p-4">
-        <img
+      <div className="relative h-48 overflow-hidden bg-white flex items-center justify-center p-4">
+        <Image
           src={product.images?.[0]?.src || product.images?.main}
           alt={product.images?.[0]?.alt || product.name}
-          className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300"
+          fill
+          className="object-contain group-hover:scale-105 transition-transform duration-300 p-4"
         />
         {product.badge && (
           <div className="absolute top-3 left-3 bg-black text-white px-2 py-1 rounded text-xs font-semibold">

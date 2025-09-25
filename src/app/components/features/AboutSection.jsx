@@ -1,6 +1,7 @@
 import Button from "../ui/Button.jsx";
 import Small from "../ui/Small.jsx";
 import SectionHeader from "../ui/SectionHeader.jsx";
+import Image from "next/image";
 
 export default function AboutSection() {
   return (
@@ -36,10 +37,12 @@ export default function AboutSection() {
           </div>
 
           {/* Image */}
-          <div className="flex justify-center items-start col-span-2 lg:pl-4 lg:justify">
-            <img
+          <div className="flex justify-center items-start col-span-2 lg:pl-4 lg:justify relative">
+            <Image
               src="/images/om-os-main.webp"
               alt="EMS dragter team"
+              width={800}
+              height={600}
               className="w-full h-auto shadow-sm"
             />
           </div>

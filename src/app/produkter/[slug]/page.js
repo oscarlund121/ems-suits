@@ -2,8 +2,9 @@ import { notFound } from 'next/navigation'
 import { getProduct } from '../../../lib/products'
 import DynamicProductSection from '../../components/features/DynamicProductSection'
 
-export default function ProductPage({ params }) {
-  const product = getProduct(params.slug)
+export default async function ProductPage({ params }) {
+  const resolvedParams = await params
+  const product = getProduct(resolvedParams.slug)
   
   if (!product) {
     notFound()

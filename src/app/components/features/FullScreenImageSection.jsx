@@ -1,14 +1,17 @@
 import SectionHeader from "../ui/SectionHeader.jsx";
 import Button from "../ui/Button.jsx";
+import Image from "next/image";
 
 export default function FullScreenImageSection() {
   return (
-    <section className="relative flex justify-center items-center">
-      <figure className="">
-        <img
+    <section className=" relative w-full flex justify-center items-center">
+      <figure className="w-full">
+        <Image
           src="/images/mobile-main.webp"
           alt="EMS træning på mobil"
-          className="object-cover"
+          width={1200}
+          height={800}
+          className="w-full object-cover"
         />
         
         {/* Text overlay */}

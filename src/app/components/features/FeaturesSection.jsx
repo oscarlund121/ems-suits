@@ -3,6 +3,7 @@ import Checkmark from '../ui/Checkmark.jsx';
 import Button from '../ui/Button.jsx';
 import FeatureItem from '../ui/FeatureItem.jsx';
 import SectionHeader from '../ui/SectionHeader.jsx';
+import Image from 'next/image';
 
 export default function FeaturesSection() {
   return (
@@ -12,9 +13,11 @@ export default function FeaturesSection() {
           
           {/* Image */}
           <div className="order-2 lg:order-1 flex justify-center items-center lg:pr-4 lg:justify-start">
-            <img
+            <Image
               src="/images/features-main.webp"
               alt="EMS dragt i aktion"
+              width={600}
+              height={400}
               className="w-full h-auto shadow-sm"
             />
           </div>

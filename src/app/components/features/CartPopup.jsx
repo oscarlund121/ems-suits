@@ -2,6 +2,7 @@
 
 import { useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { HiX, HiMinus, HiPlus, HiTrash } from 'react-icons/hi'
 import useCartStore from '../../../store/cartStore'
 import { formatPrice } from '../../../lib/products'
@@ -82,11 +83,12 @@ export default function CartPopup() {
                   <div key={item.id} className="flex gap-4 p-4 border border-gray-200 rounded-lg">
                     
                     {/* Product Image */}
-                    <div className="w-16 h-16 bg-gray-100 rounded-md overflow-hidden flex-shrink-0">
-                      <img
+                    <div className="w-16 h-16 bg-gray-100 rounded-md overflow-hidden flex-shrink-0 relative">
+                      <Image
                         src={item.images[0].src}
                         alt={item.images[0].alt}
-                        className="w-full h-full object-contain"
+                        fill
+                        className="object-contain"
                       />
                     </div>
                     

@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
+import Image from 'next/image';
 import { HiOutlineShoppingBag } from 'react-icons/hi2';
 import { FaFacebook, FaInstagram } from 'react-icons/fa';
 import useCartStore from '../../../store/cartStore';
@@ -34,9 +35,11 @@ export default function Header() {
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link href="/">
-              <img 
+              <Image 
                 src="/images/logo/logo1.png" 
                 alt="EMS Dragt Logo" 
+                width={160}
+                height={160}
                 className="h-40 md:h-40"
               />
             </Link>
