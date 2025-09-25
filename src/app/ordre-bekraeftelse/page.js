@@ -138,9 +138,9 @@ function OrderConfirmationContent() {
               Kontakt os gerne hvis du har spørgsmål eller brug for hjælp.
             </p>
             <div className="flex flex-col sm:flex-row gap-2 justify-center ">
-              <span>info@emssuits.dk</span>
+              <span>Felix@emsdragt.dk</span>
               <span className="hidden sm:inline">•</span>
-              <span>+45 12 34 56 78</span>
+              <span>+45 26 35 16 77</span>
             </div>
           </div>
 
