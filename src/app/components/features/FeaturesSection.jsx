@@ -43,7 +43,7 @@ export default function FeaturesSection() {
               <FeatureItem 
                 number="02"
                 title="Bedre. Billigere. Smartere."
-                description="EMS-dragter i topkvalitet – mere effektive, nemmere at bruge og til en skarpere pris."
+                description="Emssuits i topkvalitet – mere effektive, nemmere at bruge og til en skarpere pris."
               />
 
               <FeatureItem 

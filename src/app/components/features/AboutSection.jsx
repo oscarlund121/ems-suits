@@ -30,7 +30,7 @@ export default function AboutSection() {
             </p>
 
             <p>
-             Med EMS dragter får du en løsning,
+             Med Emssuits får du en løsning,
               der både er bedre, billigere og lettere at bruge end de
               traditionelle EMS-systemer.
             </p>

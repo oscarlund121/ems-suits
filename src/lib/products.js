@@ -2,7 +2,7 @@ export const products = {
   'ems-hjemmedragt': {
     id: 'ems-hjemmedragt',
     slug: 'ems-hjemmedragt',
-    name: 'EMS dragter Hjemmedragt',
+    name: 'EMS dragt Hjemmedragt',
     shortName: 'Hjemmedragt',
     price: 10000,
     currency: 'DKK',
@@ -55,7 +55,7 @@ export const products = {
   'ems-erhvervsdragt': {
     id: 'ems-erhvervsdragt',
     slug: 'ems-erhvervsdragt', 
-    name: 'EMS dragter Pro dragt',
+    name: 'EMS dragt Pro dragt',
     shortName: 'Erhvervsdragt',
     price: 25000,
     currency: 'DKK',

@@ -17,7 +17,7 @@ export default function Om() {
             {/* Descriptive paragraphs */}
             <div className="space-y-6 leading-relaxed max-w-3xl mx-auto">
               <p>
-                EMS Dragter præsenterer den nye bølge af EMS-teknologi og fortæller deres historie
+                EMS dragt præsenterer den nye bølge af EMS-teknologi og fortæller deres historie
                 gennem innovative træningsløsninger.
               </p>
 
@@ -34,7 +34,7 @@ export default function Om() {
               </p>
 
               <p>
-                En sand trendsætter, EMSSUITS fejrer kreativitet i alle former ved at
+                En sand trendsætter, Emssuits fejrer kreativitet i alle former ved at
                 blande talenter, discipliner og styles!
               </p>
             </div>
@@ -80,7 +80,7 @@ export default function Om() {
                 <p>
                   Vi tror på, at avanceret træningsteknologi skal være tilgængelig for alle -
                   ikke kun for dem med adgang til dyre specialcentre eller komplekse systemer.
-                  Derfor har vi udviklet EMS-dragter der kombinerer professionel kvalitet
+                  Derfor har vi udviklet Emssuits der kombinerer professionel kvalitet
                   med brugervenlig teknologi og en pris der giver mening.
                 </p>
 
@@ -106,8 +106,8 @@ export default function Om() {
               <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-1">
                 <div>
                   <p>
-                    EmsSuits giver dig effektiv helkropstræning på kun 20 minutter.
-                    Med vores trådløse EMS-dragter aktiveres alle de store
+                    Ems dragt giver dig effektiv helkropstræning på kun 20 minutter.
+                    Med vores trådløse Emssuits aktiveres alle de store
                     muskelgrupper samtidig – skånsomt, fleksibelt og med resultater,
                     du kan mærke i hverdagen.
                   </p>
@@ -121,7 +121,7 @@ export default function Om() {
                 </div>
                 <div>
                   <p>
-                    Når du træner med EmsSuits, aktiveres hele kroppen på én gang:
+                    Når du træner med Emssuits, aktiveres hele kroppen på én gang:
                     ben, ryg, mave, arme og skuldre arbejder samtidig, hvilket giver
                     en komplet træning på bare 20 minutter.
                   </p>

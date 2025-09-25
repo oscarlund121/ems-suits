@@ -5,7 +5,8 @@ import { formatPrice } from '../../../lib/products'
 
 export default function ProductCard({ product }) {
   return (
-    <div className="group bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300 max-w-sm">
+    <Link href={`/produkter/${product.slug}`} className="block">
+      <div className="group bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300 max-w-sm cursor-pointer">
       {/* Product Image */}
       <div className="relative h-48 overflow-hidden bg-white flex items-center justify-center p-4">
         <Image
@@ -46,13 +47,12 @@ export default function ProductCard({ product }) {
 
         {/* Action Buttons */}
         <div className="flex gap-2 mt-auto">
-          <Link href={`/produkter/${product.slug}`} className="flex-1">
-            <Button variant="secondary" className="w-full text-xs py-2">
-              Køb nu
-            </Button>
-          </Link>
+          <Button variant="secondary" className="w-full text-xs py-2">
+            Køb nu
+          </Button>
         </div>
       </div>
-    </div>
+      </div>
+    </Link>
   )
 }
