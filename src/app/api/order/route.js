@@ -1,13 +1,21 @@
 import { Resend } from 'resend';
 import { NextResponse } from 'next/server';
 
-const FROM_ADDRESS = process.env.RESEND_FROM || 'EMS dragt <onboarding@resend.dev>';
-const COMPANY_EMAIL = process.env.COMPANY_EMAIL || 'delivered@resend.dev';
-
 export async function POST(request) {
   try {
     // Initialize Resend inside the function to avoid build-time issues
     const resend = new Resend(process.env.RESEND_API_KEY);
+    const isProd = process.env.VERCEL_ENV === 'production' || process.env.NODE_ENV === 'production';
+    const fromAddress = (process.env.RESEND_FROM && process.env.RESEND_FROM.trim()) || 'EMS dragt <onboarding@resend.dev>';
+    const companyEmail = process.env.COMPANY_EMAIL || 'felix@emsdragt.dk';
+
+    // In production we must NOT use onboarding@resend.dev, it will cause 403
+    if (isProd && /resend\.dev/i.test(fromAddress)) {
+      return NextResponse.json(
+        { error: "Email opsætning mangler: Sæt RESEND_FROM til en afsender på jeres domæne (fx 'EMS dragt <no-reply@emsdragt.dk>') i Vercel Environment Variables. Det nuværende 'from' er onboarding@resend.dev, som kun er til tests." },
+        { status: 500 }
+      );
+    }
     
     const body = await request.json();
     
@@ -38,8 +46,8 @@ export async function POST(request) {
       // Email til virksomheden (ny bestilling)
       {
         const { error } = await resend.emails.send({
-          from: FROM_ADDRESS,
-          to: COMPANY_EMAIL,
+          from: fromAddress,
+          to: companyEmail,
           reply_to: email,
           subject: `Ny bestilling modtaget - ${orderId}`,
           html: `
@@ -123,7 +131,7 @@ export async function POST(request) {
       // Email til kunden (bekræftelse)
       {
         const { error } = await resend.emails.send({
-          from: FROM_ADDRESS,
+          from: fromAddress,
           to: email,
           subject: `Bekræftelse af din bestilling - ${orderId}`,
           html: `
@@ -164,15 +172,15 @@ export async function POST(request) {
 
             <div style="background-color: #e8f5e8; padding: 20px; border-radius: 8px; margin: 20px 0;">
               <h3 style="color: #272727; margin-top: 0;">Hvad sker der nu?</h3>
-              <p>• Vi kontakter dig inden for 1-2 arbejdsdage</p>
-              <p>• Vi koordinerer levering og installation</p>
-              <p>• Du får en endelig faktura når arbejdet er færdigt</p>
+              <p>• Du modtager en faktura inden for 1 - 2 arbejdsdage</p>
+              <p>• Når betalingen er registreret, afsender vi din Emssuit</p>
+              <p>• Du vil modtage en bekræftelse, når din ordre er afsendt</p>
             </div>
 
             <div style="margin-top: 30px; padding: 20px; border-top: 1px solid #ddd;">
               <p>Har du spørgsmål til din bestilling?</p>
               <p>
-                <strong>Email:</strong> ${process.env.COMPANY_EMAIL || 'albertlund121@gmail.com'}<br>
+                <strong>Email:</strong> ${process.env.COMPANY_EMAIL || 'felix@emsdragt.dk'}<br>
                 <strong>Telefon:</strong> +45 XX XX XX XX
               </p>
             </div>
@@ -211,8 +219,8 @@ export async function POST(request) {
       // Email til virksomheden (intern besked)
       {
         const { error } = await resend.emails.send({
-          from: FROM_ADDRESS,
-          to: COMPANY_EMAIL,
+          from: fromAddress,
+          to: companyEmail,
           reply_to: email,
           subject: `Ny ${orderType === 'contact' ? 'henvendelse' : 'bestilling'} modtaget - ${product}`,
           html: `
@@ -252,7 +260,7 @@ export async function POST(request) {
       // Email til kunden (bekræftelse)
       {
         const { error } = await resend.emails.send({
-          from: FROM_ADDRESS,
+          from: fromAddress,
           to: email,
           subject: `Tak for din ${orderType === 'contact' ? 'henvendelse' : 'bestilling'} - EMS Suits`,
           html: `
@@ -271,7 +279,7 @@ export async function POST(request) {
               ${message ? `<p><strong>Din besked:</strong></p><p style="background: white; padding: 15px; border-radius: 4px;">${message}</p>` : ''}
             </div>
 
-            <div style="background-color: #e8f5e8; padding: 20px; border-radius: 8px; margin: 20px 0;">
+            <div style="background-color: #f9f9f9; padding: 20px; border-radius: 8px; margin: 20px 0;">
               <h3 style="color: #272727; margin-top: 0;">Hvad sker der nu?</h3>
               <p>• Vi gennemgår din henvendelse</p>
               <p>• Vi kontakter dig inden for 1-2 arbejdsdage</p>

@@ -5,7 +5,7 @@ export default function HeroSection() {
   return (
     <section className="relative h-[calc(100vh-50px)] hero-bg ">
       {/* Logo overlay - positioned like in the image */}
-      <div className="absolute inset-0 flex items-start top-20 justify-end md:grid md:grid-cols-2">
+      <div className="relative flex items-start top-20 justify-end md:grid md:grid-cols-2">
         <div></div>
         <div className="flex flex-col items-center justify-center px-4 sm:px-6 md:px-8 space-y-2">
           <Image

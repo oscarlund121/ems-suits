@@ -10,7 +10,7 @@ export default function AboutSection() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-center">
           {/* Text Content */}
 
-            <div className="space-y-6">
+            <div className="space-y-6 order-2 lg:order-1">
               <SectionHeader 
                 smallText="Om os"
                 title="Mød EMS dragt"
@@ -37,7 +37,7 @@ export default function AboutSection() {
           </div>
 
           {/* Image */}
-          <div className="flex justify-center items-start col-span-2 lg:pl-4 lg:justify relative">
+          <div className=" flex justify-center items-start col-span-2 lg:pl-4 lg:justify relative order-1 lg:order-2">
             <Image
               src="/images/om-os-main.webp"
               alt="EMS dragter team"
