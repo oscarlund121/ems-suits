@@ -53,6 +53,7 @@ export default function DynamicProductSection({ product }) {
                 alt={product.images[selectedImage].alt}
                 fill
                 className="object-contain"
+                
               />
             </div>
 
@@ -73,6 +74,7 @@ export default function DynamicProductSection({ product }) {
                     alt={image.alt}
                     fill
                     className="object-contain bg-white"
+                
                   />
                 </button>
               ))}
@@ -323,7 +325,7 @@ export default function DynamicProductSection({ product }) {
                     width={800}
                     height={500}
                     className="w-full h-full object-cover"
-                    sizes="100vw"
+                    
                   />
                 </div>
                 
@@ -334,7 +336,7 @@ export default function DynamicProductSection({ product }) {
                     width={800}
                     height={500}
                     className="w-full h-full object-cover"
-                    sizes="100vw"
+                    
                   />
                 </div>
                 
@@ -345,7 +347,7 @@ export default function DynamicProductSection({ product }) {
                     width={800}
                     height={500}
                     className="w-full h-full object-cover object-[50%_30%]"
-                    sizes="100vw"
+                    
                   />
                 </div>
               </div>
@@ -360,7 +362,7 @@ export default function DynamicProductSection({ product }) {
                       width={500}
                       height={500}
                       className="w-full h-full object-cover"
-                      sizes="100vw"
+                      
                     />
                   </div>
 
@@ -371,7 +373,7 @@ export default function DynamicProductSection({ product }) {
                       width={500}
                       height={500}
                       className="w-full h-full object-cover"
-                      sizes="100vw"
+                      
                     />
                   </div>
 
@@ -382,7 +384,7 @@ export default function DynamicProductSection({ product }) {
                       width={500}
                       height={500}
                       className="w-full h-full object-cover object-[50%_30%]"
-                      sizes="100vw"
+                      
                     />
                   </div>
                 </div>
@@ -399,7 +401,7 @@ export default function DynamicProductSection({ product }) {
                       width={400}
                       height={800}
                       className="w-full h-full object-cover"
-                      sizes="33vw"
+                      
                     />
                   </div>
 
@@ -411,7 +413,7 @@ export default function DynamicProductSection({ product }) {
                       width={800}
                       height={400}
                       className="w-full h-full object-cover"
-                      sizes="67vw"
+                      
                     />
                   </div>
 
@@ -423,7 +425,7 @@ export default function DynamicProductSection({ product }) {
                       width={800}
                       height={400}
                       className="w-full h-full object-cover object-[50%_30%]"
-                      sizes="67vw"
+                      
                     />
                   </div>
                 </div>
@@ -439,7 +441,7 @@ export default function DynamicProductSection({ product }) {
                     width={300}
                     height={300}
                     className="w-full h-full object-cover"
-                    sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
+                    
                   />
                 </div>
 
@@ -451,7 +453,7 @@ export default function DynamicProductSection({ product }) {
                     width={300}
                     height={300}
                     className="w-full h-full object-cover object-[25%_50%]"
-                    sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
+                    
                   />
                 </div>
 
@@ -463,7 +465,7 @@ export default function DynamicProductSection({ product }) {
                     width={300}
                     height={300}
                     className="w-full h-full object-cover"
-                    sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
+                    
                   />
                 </div>
 
@@ -475,7 +477,7 @@ export default function DynamicProductSection({ product }) {
                     width={300}
                     height={300}
                     className="w-full h-full object-cover"
-                    sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
+                    
                   />
                 </div>
               </div>
