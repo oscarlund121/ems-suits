@@ -14,7 +14,7 @@ export default function FreedomSection() {
               alt="EMS dragt pakket i taske"
               width={600}
               height={400}
-              className="w-full h-auto"
+              className="w-auto h-full"
             />
           </div>
           {/* Text Content */}

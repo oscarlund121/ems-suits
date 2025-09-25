@@ -17,8 +17,8 @@ export default function FeaturesSection() {
               src="/images/features-main.webp"
               alt="EMS dragt i aktion"
               width={600}
-              height={400}
-              className="w-full h-auto shadow-sm"
+              height={600}
+              className="lg:w-full w-auto h-full shadow-sm"
             />
           </div>
 

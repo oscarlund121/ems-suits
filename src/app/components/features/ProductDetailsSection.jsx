@@ -68,7 +68,7 @@ export default function ProductDetailsSection() {
               alt="Mand med EMS-dragt og telefon"
               width={600}
               height={700}
-              className="h-200 object-cover shadow-sm hidden md:block"
+              className="w-auto h-200 object-cover shadow-sm hidden md:block"
             />
           </div>
 
