@@ -26,8 +26,9 @@ export function generateStaticParams() {
 }
 
 // Generate metadata for each product
-export function generateMetadata({ params }) {
-  const product = getProduct(params.slug)
+export async function generateMetadata({ params }) {
+  const resolvedParams = await params
+  const product = getProduct(resolvedParams.slug)
   
   if (!product) {
     return {

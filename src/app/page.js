@@ -5,6 +5,7 @@ import ProductDetailsSection from './components/features/ProductDetailsSection.j
 import FullScreenImageSection from './components/features/FullScreenImageSection.jsx';
 import TestimonialsSection from './components/features/TestimonialsSection.jsx';
 import ProductsSection from './components/features/ProductsSection.jsx';
+import FreedomSection from './components/features/FreedomSection.jsx';
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <FeaturesSection />
       <ProductDetailsSection />
       <FullScreenImageSection />
+      <FreedomSection />
       <ProductsSection />
       <AboutSection />
       <TestimonialsSection />

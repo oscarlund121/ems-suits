@@ -304,7 +304,7 @@ export default function DynamicProductSection({ product }) {
       </div>
       {/* Home Gallery Section - Only show for private category */}
       {product.category === "private" && (
-        <section className="bg-[#272727] text-white section-padding">
+        <section className="bg-[#272727] mt-12 text-white section-padding">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h3 className="text-2xl sm:text-3xl font-bold  mb-4">
@@ -316,32 +316,35 @@ export default function DynamicProductSection({ product }) {
               {/* Mobile: Single column stack */}
               <div className="block md:hidden space-y-4">
                 {/* All images in single column for mobile */}
-                <div className="aspect-square rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow relative">
+                <div className="h-[500px] rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow relative">
                   <Image
                     src="/images/productsite-images/workout-3.webp"
                     alt="Hjemmetræning med EMS dragt"
-                    fill
-                    className="object-cover"
+                    width={800}
+                    height={500}
+                    className="w-full h-full object-cover"
                     sizes="100vw"
                   />
                 </div>
                 
-                <div className="aspect-square rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow relative">
+                <div className="h-[500px] rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow relative">
                   <Image
                     src="/images/productsite-images/workout-man-bike.webp"
                     alt="Mand cykler med EMS dragt"
-                    fill
-                    className="object-cover"
+                    width={800}
+                    height={500}
+                    className="w-full h-full object-cover"
                     sizes="100vw"
                   />
                 </div>
                 
-                <div className="aspect-square rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow relative">
+                <div className="h-[500px] rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow relative">
                   <Image
                     src="/images/productsite-images/abs-workout.webp"
                     alt="Intens EMS træning"
-                    fill
-                    className="object-cover object-[50%_30%]"
+                    width={800}
+                    height={500}
+                    className="w-full h-full object-cover object-[50%_30%]"
                     sizes="100vw"
                   />
                 </div>
@@ -349,49 +352,53 @@ export default function DynamicProductSection({ product }) {
 
               {/* Tablet: 2x2 Grid */}
               <div className="hidden md:block lg:hidden">
-                <div className="grid grid-cols-2 gap-4 mb-4">
+                <div className="space-y-4">
                   <div className="aspect-square rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow relative">
                     <Image
                       src="/images/productsite-images/workout-3.webp"
                       alt="Hjemmetræning med EMS dragt"
-                      fill
-                      className="object-cover"
-                      sizes="50vw"
+                      width={500}
+                      height={500}
+                      className="w-full h-full object-cover"
+                      sizes="100vw"
                     />
                   </div>
-                  
+
                   <div className="aspect-square rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow relative">
                     <Image
                       src="/images/productsite-images/workout-man-bike.webp"
                       alt="Mand cykler med EMS dragt"
-                      fill
-                      className="object-cover"
-                      sizes="50vw"
+                      width={500}
+                      height={500}
+                      className="w-full h-full object-cover"
+                      sizes="100vw"
                     />
                   </div>
-                </div>
-                
-                <div className="aspect-[2/1] rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow relative">
-                  <Image
-                    src="/images/productsite-images/abs-workout.webp"
-                    alt="Intens EMS træning"
-                    fill
-                    className="object-cover object-[50%_30%]"
-                    sizes="100vw"
-                  />
+
+                  <div className="aspect-square rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow relative">
+                    <Image
+                      src="/images/productsite-images/abs-workout.webp"
+                      alt="Intens EMS træning"
+                      width={500}
+                      height={500}
+                      className="w-full h-full object-cover object-[50%_30%]"
+                      sizes="100vw"
+                    />
+                  </div>
                 </div>
               </div>
 
               {/* Desktop: Original Bento Grid */}
               <div className="hidden lg:block">
-                <div className="grid grid-cols-3 grid-rows-2 gap-3 md:gap-4 h-[600px] mb-6">
+                <div className="grid grid-cols-3 grid-rows-2 gap-3 md:gap-4 h-[1000px] mb-6">
                   {/* workout-3 - venstre side, fylder hele højden */}
                   <div className="row-span-2 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow relative">
                     <Image
                       src="/images/productsite-images/workout-3.webp"
                       alt="Hjemmetræning med EMS dragt"
-                      fill
-                      className="object-cover"
+                      width={400}
+                      height={800}
+                      className="w-full h-full object-cover"
                       sizes="33vw"
                     />
                   </div>
@@ -401,8 +408,9 @@ export default function DynamicProductSection({ product }) {
                     <Image
                       src="/images/productsite-images/workout-man-bike.webp"
                       alt="Mand cykler med EMS dragt"
-                      fill
-                      className="object-cover"
+                      width={800}
+                      height={400}
+                      className="w-full h-full object-cover"
                       sizes="67vw"
                     />
                   </div>
@@ -412,8 +420,9 @@ export default function DynamicProductSection({ product }) {
                     <Image
                       src="/images/productsite-images/abs-workout.webp"
                       alt="Intens EMS træning"
-                      fill
-                      className="object-cover object-[50%_30%]"
+                      width={800}
+                      height={400}
+                      className="w-full h-full object-cover object-[50%_30%]"
                       sizes="67vw"
                     />
                   </div>
@@ -427,8 +436,9 @@ export default function DynamicProductSection({ product }) {
                   <Image
                     src="/images/productsite-images/meditation.webp"
                     alt="Meditation og EMS træning"
-                    fill
-                    className="object-cover"
+                    width={300}
+                    height={300}
+                    className="w-full h-full object-cover"
                     sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
                   />
                 </div>
@@ -438,8 +448,9 @@ export default function DynamicProductSection({ product }) {
                   <Image
                     src="/images/productsite-images/workout-2.webp"
                     alt="Armstrækning med EMS"
-                    fill
-                    className="object-cover object-[25%_50%]"
+                    width={300}
+                    height={300}
+                    className="w-full h-full object-cover object-[25%_50%]"
                     sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
                   />
                 </div>
@@ -449,8 +460,9 @@ export default function DynamicProductSection({ product }) {
                   <Image
                     src="/images/productsite-images/woman-weights.webp"
                     alt="Kvinde træner med vægte og EMS"
-                    fill
-                    className="object-cover"
+                    width={300}
+                    height={300}
+                    className="w-full h-full object-cover"
                     sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
                   />
                 </div>
@@ -460,8 +472,9 @@ export default function DynamicProductSection({ product }) {
                   <Image
                     src="/images/productsite-images/boxing-2.webp"
                     alt="Boksning og EMS træning"
-                    fill
-                    className="object-cover"
+                    width={300}
+                    height={300}
+                    className="w-full h-full object-cover"
                     sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
                   />
                 </div>
