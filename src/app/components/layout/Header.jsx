@@ -26,7 +26,7 @@ export default function Header() {
   // Dynamic header classes based on positioning
   const headerClasses = isHomepage 
     ? "absolute top-3 left-0 right-0 z-50 bg-transparent"
-    : "relative z-50 bg-white ";
+    : "relative z-50 top-3 bg-white ";
 
   return (
     <header className={headerClasses}>
