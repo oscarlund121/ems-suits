@@ -1,6 +1,7 @@
 'use client'
 
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
+import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 import Image from 'next/image'
 import { HiX, HiMinus, HiPlus, HiTrash } from 'react-icons/hi'
@@ -9,6 +10,9 @@ import { formatPrice } from '../../../lib/products'
 import Button from '../ui/Button'
 
 export default function CartPopup() {
+  const router = useRouter()
+  const [isNavigating, setIsNavigating] = useState(false)
+  
   const { 
     items, 
     isOpen, 
@@ -17,6 +21,19 @@ export default function CartPopup() {
     updateQuantity, 
     removeItem 
   } = useCartStore()
+
+  // Handle checkout navigation with delay
+  const handleCheckoutClick = () => {
+    setIsNavigating(true)
+    
+    // Navigate first, then close popup after a longer delay
+    router.push('/checkout')
+    
+    setTimeout(() => {
+      setIsOpen(false)
+      setIsNavigating(false)
+    }, 1500) // Longer delay to ensure page has loaded
+  }
 
   // Close popup when clicking outside
   useEffect(() => {
@@ -152,16 +169,15 @@ export default function CartPopup() {
                 </div>
                 
                 {/* Checkout Button */}
-                <Link href="/checkout">
-                  <Button 
-                    variant="secondary" 
-                    size="lg" 
-                    className="w-full"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    Gå til checkout
-                  </Button>
-                </Link>
+                <Button 
+                  variant="secondary" 
+                  size="lg" 
+                  className="w-full"
+                  onClick={handleCheckoutClick}
+                  disabled={isNavigating}
+                >
+                  {isNavigating ? 'Indlæser...' : 'Gå til checkout'}
+                </Button>
                 
                 <p className="text-xs text-gray-500 text-center mt-4">
                   Du vil modtage en faktura efter bestilling
