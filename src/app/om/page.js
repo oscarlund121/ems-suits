@@ -158,7 +158,7 @@ export default function Om() {
             <h1>Frihed og fleksibilitet</h1>
             <p className="text-lg md:text-xl leading-relaxed">
               Uanset om du træner derhjemme, udendørs eller i et center, giver
-              EmsSuits dig friheden til at træne, når det passer dig. Vores
+              Emssuits dig friheden til at træne, når det passer dig. Vores
               dragter er både mere driftssikre og nemmere at bruge end
               tidligere generationer – og samtidig markant billigere end mange
               andre løsninger på markedet.
