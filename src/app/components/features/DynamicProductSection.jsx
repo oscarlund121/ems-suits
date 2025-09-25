@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { formatPrice } from "../../../lib/products";
 import useCartStore from "../../../store/cartStore";
 import Button from "../ui/Button";
@@ -12,6 +12,7 @@ export default function DynamicProductSection({ product }) {
   const [selectedImage, setSelectedImage] = useState(0);
   const [quantity, setQuantity] = useState(1);
   const [openAccordion, setOpenAccordion] = useState(null);
+  const [addedState, setAddedState] = useState({ justAdded: false });
 
   const { addItem } = useCartStore();
 
@@ -25,8 +26,9 @@ export default function DynamicProductSection({ product }) {
 
   const handleAddToCart = () => {
     addItem(product, quantity);
-    // Optional: Show success message or redirect
-    console.log(`Added ${quantity}x ${product.name} to cart`);
+    // Kun vis en kort bekræftelse på knappen
+    setAddedState({ justAdded: true });
+    setTimeout(() => setAddedState({ justAdded: false }), 1200);
   };
 
   return (
@@ -124,8 +126,9 @@ export default function DynamicProductSection({ product }) {
               size="lg"
               className="w-full"
               onClick={handleAddToCart}
+              disabled={addedState.justAdded}
             >
-              Tilføj til kurv
+              {addedState.justAdded ? 'Tilføjet!' : 'Tilføj til kurv'}
             </Button>
 
             {/* Accordions */}

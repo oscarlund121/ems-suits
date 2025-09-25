@@ -10,10 +10,10 @@ export default function FreedomSection() {
           {/* Text Content */}
           <div className="order-1 lg:order-1 flex flex-col space-y-6">
             <SectionHeader title="Frihed til at træne, hvor du vil" />
-            <p className="text-lg leading-relaxed">
+            <h5 className="text-lg leading-relaxed">
               Emssuits fylder ingenting, så du kan nemt pakke den i tasken og
               træne hjemme, på kontoret eller på ferien.
-            </p>
+            </h5>
               <div className=" text-center lg:text-left mt-4">
             <Button variant="primary" href="/produkter">
               Se vores produkter

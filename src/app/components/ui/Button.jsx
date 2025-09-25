@@ -7,7 +7,9 @@ export default function Button({
   variant = 'primary', 
   href,
   onClick, 
-  className = '' 
+  className = '',
+  disabled = false,
+  type = 'button'
 }) {
   const baseStyles = 'inline-flex items-center justify-center px-8 py-4 font-light text-sm transition-all duration-200 focus:outline-none  tracking-wide font-sans';
   
@@ -17,7 +19,7 @@ export default function Button({
     cta: 'bg-white border border-gray-200 hover:border-gray-300 hover:shadow-md text-gray-800'
   };
   
-  const classes = `${baseStyles} ${variants[variant]} ${className}`;
+  const classes = `${baseStyles} ${variants[variant]} ${className} ${disabled ? 'opacity-60 cursor-not-allowed pointer-events-none' : ''}`;
   
   if (href) {
     return (
@@ -28,7 +30,7 @@ export default function Button({
   }
   
   return (
-    <button onClick={onClick} className={classes}>
+    <button type={type} onClick={onClick} className={classes} disabled={disabled} aria-disabled={disabled}>
       {children}
     </button>
   );
