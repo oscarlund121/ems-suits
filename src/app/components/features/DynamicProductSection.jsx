@@ -93,6 +93,9 @@ export default function DynamicProductSection({ product }) {
               <p className="text-gray-600 mb-4">Varenr: {product.sku}</p>
               <div className="text-3xl font-bold text-black">
                 {formatPrice(product.price, product.currency)}
+                <span className="block text-sm font-normal text-gray-500 mt-1">
+                  {product.category === 'business' ? 'eks. moms' : 'inkl. moms'}
+                </span>
               </div>
             </div>
 
@@ -187,6 +190,9 @@ export default function DynamicProductSection({ product }) {
                           <li>
                             <strong>Garanti:</strong>{" "}
                             {product.businessFeatures.warranty}
+                          </li>
+                          <li>
+                            <strong>Kursus:</strong> Gratis EMS kursus
                           </li>
                           <li>
                             <strong>Support:</strong>{" "}

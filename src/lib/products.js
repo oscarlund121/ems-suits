@@ -107,7 +107,7 @@ export const products = {
       height: 20 // cm  
     },
     businessFeatures: {
-      warranty: "2 år garanti",
+      warranty: "2 års garanti på aktivator",
       support: "Dedikeret erhvervssupport",
       training: "Inkluderet personaletræning",
       maintenance: "Forebyggende vedligeholdelse"

@@ -74,7 +74,7 @@ export default function Footer() {
                 <span className="sr-only">Facebook</span>
                 <FaFacebook className="w-6 h-6" />
               </a>
-              <a href="#" className="text-gray-600 hover:text-gray-900" aria-label="Instagram">
+              <a href="https://www.instagram.com/emsdragt/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900" aria-label="Instagram">
                 <span className="sr-only">Instagram</span>
                 <FaInstagram className="w-6 h-6" />
               </a>

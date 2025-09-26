@@ -138,7 +138,7 @@ export default function Om() {
             </div>
 
             {/* Image - spans 2 columns */}
-            <div className="lg:col-span-2 relative">
+            <div className="lg:col-span-2 order-1 md:order-2 relative">
               <Image
                 src="/images/om-ems-page-3.webp"
                 alt="EmsSuits EMS træning"

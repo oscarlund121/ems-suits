@@ -34,8 +34,11 @@ export default function ProductCard({ product }) {
           
           {/* Price */}
           <div className="flex items-center gap-2 mb-4">
-            <span className="text-base font-bold text-black">
+            <span className="text-base font-bold text-black flex items-baseline gap-1">
               {formatPrice(product.price, product.currency)}
+              <span className="text-[11px] font-normal text-gray-500">
+                {product.category === 'business' ? 'eks. moms' : 'inkl. moms'}
+              </span>
             </span>
             {product.originalPrice && (
               <span className="text-xs text-gray-500 line-through">

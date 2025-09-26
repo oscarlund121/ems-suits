@@ -98,7 +98,7 @@ export default function Centre() {
                     <a href="#" className="w-8 h-8 bg-[#272727] rounded-full flex items-center justify-center text-white hover:bg-gray-600 transition-colors">
                       <FaFacebook className="w-4 h-4" />
                     </a>
-                    <a href="#" className="w-8 h-8 bg-[#272727] rounded-full flex items-center justify-center text-white hover:bg-gray-600 transition-colors">
+                    <a href="https://www.instagram.com/emsdragt/" target="_blank" rel="noopener noreferrer" className="w-8 h-8 bg-[#272727] rounded-full flex items-center justify-center text-white hover:bg-gray-600 transition-colors">
                       <FaInstagram className="w-4 h-4" />
                     </a>
                     <a href="#" className="w-8 h-8 bg-[#272727] rounded-full flex items-center justify-center text-white hover:bg-gray-600 transition-colors">

@@ -11,7 +11,7 @@ export default function Button({
   disabled = false,
   type = 'button'
 }) {
-  const baseStyles = 'inline-flex items-center justify-center px-8 py-4 font-light text-sm transition-all duration-200 focus:outline-none  tracking-wide font-sans';
+  const baseStyles = 'inline-flex items-center justify-center px-8 py-4 font-light text-sm transition-all duration-200 focus:outline-none tracking-wide font-sans cursor-pointer';
   
   const variants = {
     primary: 'bg-white border border-white text-[#272727] hover:bg-[#272727] hover:text-white hover:underline',
