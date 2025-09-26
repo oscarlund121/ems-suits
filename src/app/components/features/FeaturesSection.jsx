@@ -23,7 +23,7 @@ export default function FeaturesSection() {
           </div>
 
           {/* Text Content */}
-          <div className="order-1 lg:order-2 flex flex-col space-y-4 ">
+          <div className="order-1 lg:order-2 flex flex-col space-y-2 ">
             
 
             {/* Section Header */}

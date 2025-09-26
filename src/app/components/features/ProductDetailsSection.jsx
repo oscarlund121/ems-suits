@@ -8,10 +8,10 @@ export default function ProductDetailsSection() {
   return (
     <section className="section-padding text-black bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           
           {/* Text Content */}
-          <div className="space-y-6">
+          <div className="space-y-2">
             
             {/* Section Header */}
             <SectionHeader 
@@ -62,13 +62,13 @@ export default function ProductDetailsSection() {
           </div>
 
           {/* Image */}
-          <div className="flex justify-center items-center lg:pl-4 mt-6 lg:justify-end">
+          <div className="md:flex justify-center items-center lg:pl-4 mt-6 lg:justify-end hidden">
             <Image
               src="/images/product-details.webp"
               alt="Mand med EMS-dragt og telefon"
               width={600}
               height={700}
-              className="w-auto h-200 object-cover shadow-sm hidden md:block"
+              className="w-full  h-180 object-cover shadow-sm"
             />
           </div>
 

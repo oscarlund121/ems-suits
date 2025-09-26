@@ -100,7 +100,7 @@ export default function Om() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 items-center">
             {/* Text content - spans 1 column */}
-            <div className="lg:col-span-1 space-y-6">
+            <div className="lg:col-span-1 space-y-6 md:order-1 order-2">
               <h3>Produktet i detaljer</h3>
 
               <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-1">
